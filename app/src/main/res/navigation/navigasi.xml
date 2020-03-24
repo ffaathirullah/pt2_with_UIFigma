@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigasi"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="org.d3rpla4203.test.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_cuaca_panas"
+            app:destination="@id/cuaca_panas" />
+        <action
+            android:id="@+id/action_home2_to_artikle_kesehatan"
+            app:destination="@id/artikle_kesehatan" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="org.d3rpla4203.test.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/cuaca_panas"
+        android:name="org.d3rpla4203.test.cuaca_panas"
+        android:label="fragment_cuaca_panas"
+        tools:layout="@layout/fragment_cuaca_panas" />
+    <fragment
+        android:id="@+id/artikle_kesehatan"
+        android:name="org.d3rpla4203.test.artikle_kesehatan"
+        android:label="artikle_kesehatan" >
+        <action
+            android:id="@+id/action_artikle_kesehatan_to_cuaca_panas"
+            app:destination="@id/cuaca_panas" />
+    </fragment>
+</navigation>
